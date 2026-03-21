@@ -32,13 +32,8 @@ const App = () => {
     return (
         <div>
             <h1>DEX Swap Simulator</h1>
-
-            <SwapForm
-                swapParams={swapParams}
-                handleChange={handleChange}></SwapForm>
-
+            <SwapForm swapParams={swapParams} handleChange={handleChange} />
             <SwapScenarios setSwapParams={setSwapParams} />
-
             {result && (
                 <SwapResult result={result} direction={swapParams.direction} />
             )}

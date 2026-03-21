@@ -1,7 +1,7 @@
 import "../styles/Field.css"
 
 const Field = (props) => {
-    const { text, name, value, onChange, type = "text", max } = props
+    const { text, name, value, onChange, max, type = "text"} = props
 
     return (
         <label className="field">
