@@ -1,0 +1,30 @@
+.scenarios-container {
+    margin: 24px 0;
+}
+
+.scenarios-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.scenarios-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+.scenarios-grid button {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.scenarios-grid button:hover {
+    border-color: var(--accent);
+    background: var(--bg);
+    color: var(--accent);
+}

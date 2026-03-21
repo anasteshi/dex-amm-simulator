@@ -1,0 +1,29 @@
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-muted);
+    transition: border-color 0.2s;
+    cursor: text;
+}
+
+.field:focus-within {
+    border-color: var(--accent);
+    color: var(--text);
+}
+
+.field input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: right;
+    width: 60%;
+}

@@ -1,0 +1,53 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #ffffff;
+  --surface: #f5f5f5;
+  --border: #d0d0d0;
+  --text: #111111;
+  --text-muted: #555555;
+  --accent: #0047ff;
+  --font: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow-y: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 480px;
+  padding: 20px 20px;
+  zoom: 0.9;
+}
+
+button {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--text);
+  border: none;
+  color: var(--bg);
+  font-family: var(--font);
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: var(--accent);
+}
+
+button:active {
+  transform: translateY(1px);
+}
