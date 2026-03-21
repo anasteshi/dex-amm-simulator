@@ -3,6 +3,7 @@ import "./styles/App.css"
 import SwapForm from "./components/SwapForm.jsx"
 import SwapScenarios from "./components/SwapScenarios.jsx"
 import SwapResult from "./components/SwapResult.jsx"
+import SwapChart from "./components/SwapChart.jsx"
 import simulateSwap from "./utils/simulateSwap.js"
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
             {result && (
                 <SwapResult result={result} direction={swapParams.direction} />
             )}
+            <SwapChart reserveA={swapParams.resA} reserveB={swapParams.resB}></SwapChart>
         </div>
     )
 }
