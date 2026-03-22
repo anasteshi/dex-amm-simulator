@@ -50,8 +50,8 @@ const App = () => {
                 <section className="chart-column">
                     <div className="chart-card">
                         <SwapChart
-                            reserveA={swapParams.resA}
-                            reserveB={swapParams.resB}></SwapChart>
+                            tokenIn={swapParams.direction === "AtoB" ? swapParams.resA :swapParams.resB}
+                            tokenOut={swapParams.direction === "AtoB" ? swapParams.resB :swapParams.resA}></SwapChart>
                     </div>
                     <div className="desc-card">
                         <h3>Understanding the AMM Curve y = k / x</h3>

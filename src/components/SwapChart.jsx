@@ -18,17 +18,17 @@ Chart.register(
 )
 
 const SwapChart = (props) => {
-    const { reserveA, reserveB } = props
+    const { tokenIn, tokenOut } = props
     // Constant-product of tokens
-    const k = reserveA * reserveB
+    const k = tokenIn * tokenOut
     const points = []
 
     /*  Since it's a hyperbola it can't be 0,
         bc y=k/x -> y=k/0.
         That's why 0.1 is used to set a starting point.
     */
-    const startX = reserveA * 0.1
-    const endX = reserveA * 2
+    const startX = tokenIn * 0.1
+    const endX = tokenIn * 2
     const step = (endX - startX) / 15
 
     for (let x = startX; x <= endX; x += step) {
@@ -45,10 +45,10 @@ const SwapChart = (props) => {
             x: {
                 type: "linear",
                 position: "bottom",
-                title: { display: true, text: "Reserve A" },
+                title: { display: true, text: "Reserve In" },
             },
             y: {
-                title: { display: true, text: "Reserve B" },
+                title: { display: true, text: "Reserve Out" },
             },
         },
     }
@@ -56,7 +56,7 @@ const SwapChart = (props) => {
     const data = {
         datasets: [
             {
-                data: [{ x: reserveA, y: reserveB }],
+                data: [{ x: tokenIn, y: tokenOut }],
                 pointBackgroundColor: "#a30000",
                 pointRadius: 5,
             },
