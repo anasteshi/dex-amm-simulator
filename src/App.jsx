@@ -27,6 +27,7 @@ const App = () => {
     }, [swapParams])
 
     const handleChange = (field, value) => {
+        if (field !== "direction") value = Number(value)
         setSwapParams((prev) => ({ ...prev, [field]: value }))
     }
 
@@ -50,8 +51,20 @@ const App = () => {
                 <section className="chart-column">
                     <div className="chart-card">
                         <SwapChart
-                            tokenIn={swapParams.direction === "AtoB" ? swapParams.resA :swapParams.resB}
-                            tokenOut={swapParams.direction === "AtoB" ? swapParams.resB :swapParams.resA}></SwapChart>
+                            tokenIn={
+                                swapParams.direction === "AtoB" ?
+                                    swapParams.resA
+                                :   swapParams.resB
+                            }
+                            tokenOut={
+                                swapParams.direction === "AtoB" ?
+                                    swapParams.resB
+                                :   swapParams.resA
+                            }
+                            amountIn={swapParams.amountIn}
+                            amountOut={
+                                result === null ? 0 : result.amountOut
+                            }></SwapChart>
                     </div>
                     <div className="desc-card">
                         <h3>Understanding the AMM Curve y = k / x</h3>
