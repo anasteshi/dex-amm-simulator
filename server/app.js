@@ -1,5 +1,6 @@
 import express from "express"
 import "dotenv/config"
+import cors from "cors"
 import poolRouter from "./routes/poolRouter.js"
 import connectDB from "./db.js"
 
@@ -9,6 +10,7 @@ const port = process.env.PORT
 
 // Middleware
 app.use(express.json())
+app.use(cors())
 app.use("/api/pool", poolRouter)
 
 const start = async () => {
