@@ -7,7 +7,6 @@ import SwapChart from "./components/SwapChart.jsx"
 import SwapChartDesc from "./components/SwapChartDesc.jsx"
 import simulateSwap from "./utils/simulateSwap.js"
 import Button from "./components/Button.jsx"
-const API_URL = import.meta.env.API_URL
 
 const App = () => {
     const [swapParams, setSwapParams] = useState({
@@ -19,14 +18,14 @@ const App = () => {
     })
 
     const getPool = async () => {
-        const response = await fetch(`${API_URL}/api/pool`)
+        const response = await fetch("https://dex-amm-simulator.onrender.com/api/pool")
         const data = await response.json()
         console.log(data)
         setSwapParams(data)
     }
 
     const addPool = async () => {
-        await fetch(`${API_URL}/api/pool`, {
+        await fetch("https://dex-amm-simulator.onrender.com/api/pool", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ ...swapParams }),
