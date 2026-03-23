@@ -3,6 +3,7 @@ A small tool that simulates token swaps on a DEX using the Constant-Product Mark
 
 ## Demonstration
 [Check out the simulator here:](https://anasteshi.github.io/dex-amm-simulator/)
+**Note:** the backend is hosted on a free Render tier. If the app hasn't been visited recently, the server may be "sleeping." In this case, the first request could take something around **30-50 seconds** to wake up. Thank you!
 
 ## How it Works
 The core of this simulator is based on the Uniswap v2 mathematical model. It ensures that the product of the reserves of 2 tokens in a liquidity pool remains the same.
