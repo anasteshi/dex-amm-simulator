@@ -3,20 +3,20 @@ import Field from "./Field.jsx"
 import Button from "./Button.jsx"
 
 const SwapForm = ({ swapParams, handleChange }) => {
-    const { resA, resB, amountIn, fee, direction } = swapParams
+    const { reserveA, reserveB, amountIn, fee, direction } = swapParams
 
     return (
         <div className="form">
             <Field
                 text="Reserve A:"
-                name="resA"
-                value={resA}
+                name="reserveA"
+                value={reserveA}
                 onChange={handleChange}
             />
             <Field
                 text="Reserve B:"
-                name="resB"
-                value={resB}
+                name="reserveB"
+                value={reserveB}
                 onChange={handleChange}
             />
             <Field

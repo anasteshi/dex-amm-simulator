@@ -1,7 +1,7 @@
 const Button = (props) => {
-    const { children, onClick } = props
+    const { children, onClick, className = "" } = props
 
-    return <button onClick={onClick}>{children}</button>
+    return <button className={className} onClick={onClick}>{children}</button>
 }
 
 export default Button

@@ -8,7 +8,7 @@ const Field = (props) => {
             {text}
             <input
                 type={type}
-                value={value}
+                value={value || ""}
                 min={0}
                 max={max}
                 name={name}

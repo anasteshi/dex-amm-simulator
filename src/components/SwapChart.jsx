@@ -17,6 +17,7 @@ Chart.register(
     LineController,
 )
 
+// Visualises the constant-product curve and the state transition (before/after swap)
 const SwapChart = (props) => {
     const { tokenIn, tokenOut, amountIn, amountOut } = props
     // Constant-product of tokens

@@ -2,8 +2,8 @@ import "../styles/SwapScenarios.css"
 import Button from "./Button.jsx"
 
 const base = {
-    resA: 100,
-    resB: 1000,
+    reserveA: 100,
+    reserveB: 1000,
     fee: 0.003,
     direction: "AtoB",
 }
