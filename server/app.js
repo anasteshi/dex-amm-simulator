@@ -1,6 +1,6 @@
 import express from "express"
 import "dotenv/config"
-import poolRouter from "../routes/poolRouter.js"
+import poolRouter from "./routes/poolRouter.js"
 import connectDB from "./db.js"
 
 // Server
